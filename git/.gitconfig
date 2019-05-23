@@ -8,5 +8,8 @@
 	br = branch
 	cm = commit
 	st = status
+	sta = stash
 	visual = !gitk
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+[credential]
+	helper = cache --timeout 86400
