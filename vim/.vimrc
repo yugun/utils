@@ -19,6 +19,7 @@ syntax on
 filetype on
 nmap <F12> :noh<CR>
 autocmd BufWritePre * :%s/\s\+$//e
+set clipboard=unnamedplus
 
 "-----------------------------"
 
