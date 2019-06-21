@@ -31,7 +31,8 @@ set csprg=/usr/bin/cscope
 set csto=0
 set cst
 set nocsverb
-cscope add /home/yugun/linux/cscope.out /home/yugun/linux
+source ~/.cscope_maps.vim
+"cscope add /home/yugun/linux/cscope.out /home/yugun/linux
 
 
 "-----------------------------"
