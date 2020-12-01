@@ -18,7 +18,7 @@ set encoding:utf-8
 syntax on
 filetype on
 nmap <F12> :noh<CR>
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e "clear trailing whitespaces when saving
 set clipboard=unnamedplus
 
 "-----------------------------"
