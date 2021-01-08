@@ -50,11 +50,6 @@ let Tlist_Exit_OnlyWindow=0
 let Tlist_Auto_Open=0
 let Tlist_Use_Right_Window=1
 set tags=./tags
-set tags+=/home/yugun/working_directory/linux-4.12.9/tags
-set tags+=/usr/include/tags
-set tags+=/home/yugun/working_directory/ofpvpn/kmodules/pnlib/tags
-set tags+=/home/yugun/working_directory/ofpvpn/kmodules/tpmode/tags
-set tags+=/home/yugun/working_directory/ofpvpn/uproxy/bcache/tags
 
 "-----------------------------"
 
@@ -86,3 +81,15 @@ let g:SrcExpl_isUpdateTags = 0
 "-----------------------------"
 let NERDTreeWinPos="left"
 nmap <F9> :NERDTreeToggle<CR>
+
+
+"-----------------------------"
+
+" vim-plug Configuration
+
+"-----------------------------"
+call plug#begin('~/.vim/plugged')
+
+Plug 'ycm-core/YouCompleteMe'
+
+call plug#end()
