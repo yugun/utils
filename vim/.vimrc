@@ -7,20 +7,34 @@
 set hlsearch
 set ts=4
 set sw=4
+set softtabstop=4
 set ci
 set si
 set ai
 set nu
 set vb
 set list
-set listchars=tab:>-,trail:-
-set encoding:utf-8
+set listchars=tab:>-,trail:-,space:·,extends:>,precedes:<
+set autochdir
+
+set encoding=utf-8     "encoding for current file
+set fileencoding=utf-8 "encoding for save file
+"set termencoding= encoding for terminal
+
+set backspace=indent,eol,start
+set expandtab
+set formatoptions-=r
+
 syntax on
 filetype on
 nmap <F12> :noh<CR>
 set clipboard=unnamedplus
-autocmd BufWritePre * :%s/\s\+$//e "clear trailing whitespaces when saving
+"autocmd BufWritePre * :%s/\s\+$//e "clear trailing whitespaces when saving
+"au BufWritePost *.c,*.cpp,*.h silent! !ctags -R &
 autocmd BufEnter *.pn :setlocal filetype=php
+
+highlight Comment term=bold cterm=bold ctermfg=4
+
 
 "-----------------------------"
 
@@ -48,7 +62,6 @@ let Tlist_Ctags_Cmd="/usr/bin/ctags"
 let Tlist_Inc_Winwidth=0
 let Tlist_Exit_OnlyWindow=0
 let Tlist_Auto_Open=0
-let Tlist_Use_Right_Window=1
 set tags=./tags
 
 "-----------------------------"
@@ -90,6 +103,11 @@ nmap <F9> :NERDTreeToggle<CR>
 "-----------------------------"
 call plug#begin('~/.vim/plugged')
 
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-misc'
+"Plug 'ycm-core/YouCompleteMe'
+"Plug 'craigemery/vim-autotag'
+"Plug 'majutsushi/tagbar'
+"Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
